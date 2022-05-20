@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="427.0" prefWidth="827.0" style="-fx-background-color: #A7745B;" styleClass="chosen-fruit-card" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidevuser.gui.BarchartController">
+   <children>
+      <BarChart fx:id="barchart" layoutX="103.0" layoutY="5.0" prefHeight="418.0" prefWidth="621.0" style="-fx-background-color: #A7745B;" styleClass="chosen-fruit-card" stylesheets="@style.css" title="Répartition Des Programmes selon les Categories">
+         <xAxis>
+            <CategoryAxis label="Categories" side="BOTTOM" tickLabelFill="WHITE" fx:id="x" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis fx:id="y" label="Nbr Prog" side="LEFT" tickLabelFill="WHITE" />
+         </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

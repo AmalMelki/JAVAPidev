@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="817.0" prefWidth="1230.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidevuser.gui.TransportIndexController">
+   <children>
+      <ImageView fitHeight="764.0" fitWidth="1256.0" opacity="0.78" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="10.0" layoutY="23.0" prefHeight="569.0" prefWidth="216.0">
+         <children>
+            <ImageView disable="true" fitHeight="89.0" fitWidth="218.0" layoutX="10.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@logo.png" />
+               </image>
+            </ImageView>
+            <Button alignment="CENTER" layoutX="4.0" layoutY="145.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="208.0" style="-fx-background-color: #F3E815;" styleClass="search-button" stylesheets="@../../../values/style.css" text="Gestion Programmes" textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="Btprog" layoutX="6.0" layoutY="225.0" mnemonicParsing="false" onAction="#listeprog" prefHeight="31.0" prefWidth="208.0" style="-fx-background-color: #363638;" styleClass="add-btn" stylesheets="@../../../values/style.css" text="Programmes" textFill="WHITE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         
+            <Button fx:id="BTcategorie" layoutX="6.0" layoutY="285.0" mnemonicParsing="false" onAction="#listecategorie" prefHeight="31.0" prefWidth="208.0" style="-fx-background-color: #363638;" styleClass="add-btn" stylesheets="@../../../values/style.css" text="Catégories" textFill="WHITE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="Bttransport" layoutX="6.0" layoutY="395.0" mnemonicParsing="false" onAction="#listetransport" prefHeight="31.0" prefWidth="208.0" style="-fx-background-color: #363638;" styleClass="add-btn" stylesheets="@../../../values/style.css" text="Moyen De Transport" textFill="WHITE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="Btguide" layoutX="6.0" layoutY="344.0" mnemonicParsing="false" onAction="#listeguide" prefHeight="31.0" prefWidth="208.0" style="-fx-background-color: #363638;" styleClass="add-btn" stylesheets="@../../../values/style.css" text="Guides" textFill="WHITE">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="237.0" layoutY="21.0" prefHeight="102.0" prefWidth="927.0">
+         <children>
+            <ImageView disable="true" fitHeight="50.0" fitWidth="63.0" layoutX="716.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../../Desktop/SymfonyPidev-amal/public/back-office/assets/images/faces/face11.jpg" />
+               </image>
+            </ImageView>
+            <Button alignment="CENTER" contentDisplay="CENTER" layoutX="783.0" layoutY="14.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="160.0" style="-fx-background-color: #B90805;" styleClass="search-button" stylesheets="@../../../values/style.css" text="Déconnexion" textFill="WHITE">
+               <font>
+                  <Font name="System Italic" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="702.0" layoutY="67.0" prefHeight="21.0" prefWidth="79.0" text="Melki Amal" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="288.0" layoutY="152.0" prefHeight="595.0" prefWidth="919.0">
+         <children>
+            <TableView fx:id="table" layoutX="19.0" layoutY="100.0" opacity="0.58" prefHeight="425.0" prefWidth="575.0" style="-fx-background-color: grey;">
+               <columns>
+                  <TableColumn fx:id="matriculeC" prefWidth="290.0" text="Matricule" />
+                  <TableColumn fx:id="CapaciteC" prefWidth="284.0" text="Capacite" />
+               </columns>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+            </TableView>
+            <Button layoutX="656.0" layoutY="187.0" mnemonicParsing="false" onAction="#ajouter" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #b8a9c9;" styleClass="add-btn" stylesheets="@style.css" text="Nouveau" textFill="WHITE">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Calibri Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="177.0" layoutY="-14.0" prefHeight="78.0" prefWidth="515.0" text="Liste Moyens de Transport" textFill="#b5aaaa">
+               <font>
+                  <Font name="CentSchbkCyrill BT Bold" size="36.0" />
+               </font>
+            </Label>
+            <Button layoutX="667.0" layoutY="281.0" mnemonicParsing="false" onAction="#modifier" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #eeac99;" styleClass="add-btn" stylesheets="@style.css" text="Modifier" textFill="WHITE">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Calibri Bold Italic" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="667.0" layoutY="390.0" mnemonicParsing="false" onAction="#supprimer" prefHeight="34.0" prefWidth="238.0" style="-fx-background-color: #c83349;" styleClass="add-btn" stylesheets="@style.css" text="Supprimer" textFill="WHITE">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <font>
+                  <Font name="Calibri Bold Italic" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

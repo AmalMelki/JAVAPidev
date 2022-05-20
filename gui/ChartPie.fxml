@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="427.0" prefWidth="827.0" styleClass="shopping-online-card" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidevuser.gui.ChartPieController">
+   <children>
+      <BarChart fx:id="barchart" layoutX="107.0" layoutY="88.0" prefHeight="418.0" prefWidth="621.0" styleClass="shopping-online-card" stylesheets="@style.css" title="Nombre Des Programmes Régions" AnchorPane.bottomAnchor="88.0" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="134.0" AnchorPane.topAnchor="88.0">
+        <xAxis>
+          <CategoryAxis label="Régions" side="BOTTOM" styleClass="three" stylesheets="@style_1.css" fx:id="x" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis fx:id="y" label="Nbr Prog" side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>
